@@ -41,6 +41,7 @@ async function loadData() {
   renderItems();
   renderMercs();
   renderStructures();
+  fillCampaignEffectFilter();
   renderCampaignItems();
   populateBuildCreator();
   await loadBuildsFromSupabase();
@@ -901,13 +902,61 @@ function campaignBlurb(it) {
   return text ? `<div class="card-sub">${text}</div>` : '';
 }
 
-function renderCampaignItems(filter = '', catFilter = '', rarityFilter = '') {
+// The effect filter lists only what patch 3.0 invented -- the caster stats
+// first, then the attack ones. The stats Warcraft always had (strength, armor,
+// hit points...) are left out: every other item carries them, so filtering by
+// them says nothing. CAMPAIGN_EFFECT_CLASSIC keeps them out of "Other" too.
+const CAMPAIGN_EFFECT_GROUPS = [
+  ['Caster (new)', ['ability_amplification_pct', 'ability_speed_pct', 'ability_damage',
+    'ability_vamp_pct', 'spell_critical_chance_pct', 'spell_critical_damage_pct',
+    'mana_efficiency_pct', 'spell_dmg_reduction_pct', 'resolve_pct']],
+  ['Attack (new)', ['critical_chance_pct', 'critical_damage_pct', 'life_steal_pct',
+    'attack_speed_pct', 'bonus_dmg', 'evasion_pct']],
+];
+const CAMPAIGN_EFFECT_CLASSIC = ['armor', 'hp', 'hp_regen', 'mana', 'mana_regen_pct',
+  'move_speed', 'str', 'agi', 'int', 'all_stats'];
+// Whether an item does something on click rides in the same dropdown, under its
+// own heading; these two values are not stat keys, hence the prefix.
+const CAMPAIGN_KIND_VALUES = { 'kind:active': 'active', 'kind:passive': 'passive' };
+
+function fillCampaignEffectFilter() {
+  const sel = document.getElementById('citem-filter-effect');
+  const counts = {};
+  campaignItems.forEach(it => Object.keys(it.stats || {}).forEach(k => {
+    counts[k] = (counts[k] || 0) + 1;
+  }));
+  const known = new Set(CAMPAIGN_EFFECT_GROUPS.flatMap(([, keys]) => keys)
+    .concat(CAMPAIGN_EFFECT_CLASSIC));
+  // A stat the data grows later still shows up, under its own heading.
+  const groups = CAMPAIGN_EFFECT_GROUPS.concat(
+    [['Other', Object.keys(counts).filter(k => !known.has(k))]]);
+  const option = k => `<option value="${k}">${statLabel(k)} (${counts[k]})</option>`;
+  const kinds = Object.entries(CAMPAIGN_KIND_VALUES).map(([value, type]) => {
+    const n = campaignItems.filter(it => it.effect_type === type).length;
+    return `<option value="${value}">${type === 'active' ? 'Active' : 'Passive'} (${n})</option>`;
+  }).join('');
+  sel.innerHTML = '<option value="">All Effects</option>'
+    + groups.map(([label, keys]) => {
+      const have = keys.filter(k => counts[k]);
+      return have.length === 0 ? ''
+        : `<optgroup label="${label}">${have.map(option).join('')}</optgroup>`;
+    }).join('')
+    + `<optgroup label="Item kind">${kinds}</optgroup>`;
+}
+
+function renderCampaignItems(filter = '', tagFilter = '', effectFilter = '') {
   const grid = document.getElementById('citem-list');
   const q = filter.toLowerCase();
+  const kind = CAMPAIGN_KIND_VALUES[effectFilter];
+  const stat = kind ? '' : effectFilter;
+  const catFilter = tagFilter.startsWith('cat:') ? tagFilter.slice(4) : '';
+  const rarityFilter = tagFilter.startsWith('rar:') ? tagFilter.slice(4) : '';
   const filtered = campaignItems.filter(it =>
     it.name.toLowerCase().includes(q)
     && (!catFilter || it.category === catFilter)
-    && (!rarityFilter || it.rarity === rarityFilter));
+    && (!rarityFilter || it.rarity === rarityFilter)
+    && (!stat || (it.stats && stat in it.stats))
+    && (!kind || it.effect_type === kind));
 
   if (filtered.length === 0) {
     grid.innerHTML = noMatches('campaign items', filter);
@@ -989,12 +1038,12 @@ function showCampaignItemDetail(id, el) {
 function rerenderCampaignItems() {
   renderCampaignItems(
     document.getElementById('citem-search').value,
-    document.getElementById('citem-filter-cat').value,
-    document.getElementById('citem-filter-rarity').value);
+    document.getElementById('citem-filter-tag').value,
+    document.getElementById('citem-filter-effect').value);
 }
 document.getElementById('citem-search').addEventListener('input', rerenderCampaignItems);
-document.getElementById('citem-filter-cat').addEventListener('change', rerenderCampaignItems);
-document.getElementById('citem-filter-rarity').addEventListener('change', rerenderCampaignItems);
+document.getElementById('citem-filter-tag').addEventListener('change', rerenderCampaignItems);
+document.getElementById('citem-filter-effect').addEventListener('change', rerenderCampaignItems);
 
 // ─── BUILDS ────────────────────────────────────────────────────────────────────
 function renderBuilds(filter = '') {

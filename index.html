@@ -97,27 +97,34 @@
     <section id="tab-campaign-items" class="tab">
       <div class="search-bar">
         <input type="text" id="citem-search" placeholder="Search campaign items...">
-        <select id="citem-filter-cat">
-          <option value="">All Types</option>
-          <option value="Primary Weapon">Primary Weapons</option>
-          <option value="Secondary Weapon">Secondary Weapons</option>
-          <option value="Helm">Helms</option>
-          <option value="Armor">Armor</option>
-          <option value="Gloves">Gloves</option>
-          <option value="Boots">Boots</option>
-          <option value="Accessory">Accessories</option>
-          <option value="Trinket">Trinkets</option>
-          <option value="Consumable">Consumables</option>
-          <option value="Quest Item">Quest Items</option>
-          <option value="Miscellaneous">Miscellaneous</option>
+        <!-- Slot and rarity are the same question -- "which kind of item" --
+             so they share one dropdown, each under its own heading. -->
+        <select id="citem-filter-tag">
+          <option value="">All Types &amp; Rarities</option>
+          <optgroup label="Type">
+            <option value="cat:Primary Weapon">Primary Weapons</option>
+            <option value="cat:Secondary Weapon">Secondary Weapons</option>
+            <option value="cat:Helm">Helms</option>
+            <option value="cat:Armor">Armor</option>
+            <option value="cat:Gloves">Gloves</option>
+            <option value="cat:Boots">Boots</option>
+            <option value="cat:Accessory">Accessories</option>
+            <option value="cat:Trinket">Trinkets</option>
+            <option value="cat:Consumable">Consumables</option>
+            <option value="cat:Quest Item">Quest Items</option>
+            <option value="cat:Miscellaneous">Miscellaneous</option>
+          </optgroup>
+          <optgroup label="Rarity">
+            <option value="rar:Common">Common</option>
+            <option value="rar:Uncommon">Uncommon</option>
+            <option value="rar:Rare">Rare</option>
+            <option value="rar:Epic">Epic</option>
+            <option value="rar:Legendary">Legendary</option>
+          </optgroup>
         </select>
-        <select id="citem-filter-rarity">
-          <option value="">All Rarities</option>
-          <option value="Common">Common</option>
-          <option value="Uncommon">Uncommon</option>
-          <option value="Rare">Rare</option>
-          <option value="Epic">Epic</option>
-          <option value="Legendary">Legendary</option>
+        <!-- The stat an item grants, filled from the data so it cannot drift. -->
+        <select id="citem-filter-effect">
+          <option value="">All Effects</option>
         </select>
       </div>
       <div id="citem-list"></div>
