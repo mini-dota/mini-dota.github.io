@@ -536,6 +536,17 @@ function itemIcon(it, size) {
   if (it.icon == null) return '';
   return itemIconStyle(it.icon, it.icon_index, it.icon_cols || 4, it.icon_rows || 3, size);
 }
+// The whole icon element. A standalone icon file is a real <img>, so a right
+// click offers "Copy image" / "Save image as"; only spritesheet slices stay a
+// background, since the browser has no single image to hand out for those.
+function itemIconHtml(it, cls, size) {
+  if (it.icon == null) return '';
+  if (it.icon_index == null) {
+    const alt = String(it.name || '').replace(/"/g, '&quot;');
+    return `<img class="${cls}" src="${it.icon}" width="${size}" height="${size}" alt="${alt}" loading="lazy">`;
+  }
+  return `<div class="${cls}" ${itemIcon(it, size)}></div>`;
+}
 
 // The category doubles as the shop an item is sold at; a few read better as the
 // building's own name in a heading.
@@ -616,7 +627,7 @@ function renderItems(filter = '', catFilter = '') {
   const card = it => `
     <div class="card" role="button" tabindex="0" onclick="showItemTooltip('${it.id}', this)">
       <div class="card-top-row">
-        ${itemIcon(it, 56) ? `<div class="item-card-icon" ${itemIcon(it, 56)}></div>` : ''}
+        ${itemIconHtml(it, 'item-card-icon', 56)}
         <div class="card-top-text">
           ${priceHtml(it) ? `<div class="card-cost">${priceHtml(it)}</div>` : ''}
           <div class="card-name">${it.name}</div>
@@ -802,7 +813,7 @@ function showItemTooltip(id, el) {
   // grey whisper in the corner and joins the tags, which is what it is.
   const itemHtml = `
     <div class="detail-header">
-      ${itemIcon(item, 64) ? `<div class="item-detail-icon" ${itemIcon(item, 64)}></div>` : ''}
+      ${itemIconHtml(item, 'item-detail-icon', 64)}
       <div style="flex:1;">
         <div class="detail-title">
           ${item.name}
@@ -966,7 +977,7 @@ function renderCampaignItems(filter = '', tagFilter = '', effectFilter = '') {
   const card = it => `
     <div class="card" role="button" tabindex="0" onclick="showCampaignItemDetail('${it.id}', this)">
       <div class="card-top-row">
-        ${itemIcon(it, 56) ? `<div class="item-card-icon" ${itemIcon(it, 56)}></div>` : ''}
+        ${itemIconHtml(it, 'item-card-icon', 56)}
         <div class="card-top-text">
           ${priceHtml(it) ? `<div class="card-cost">${priceHtml(it)}</div>` : ''}
           <div class="card-name">${it.name}</div>
@@ -1011,7 +1022,7 @@ function showCampaignItemDetail(id, el) {
 
   const itemHtml = `
     <div class="detail-header">
-      ${itemIcon(item, 64) ? `<div class="item-detail-icon" ${itemIcon(item, 64)}></div>` : ''}
+      ${itemIconHtml(item, 'item-detail-icon', 64)}
       <div style="flex:1;">
         <div class="detail-title">
           ${item.name}

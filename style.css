@@ -541,6 +541,8 @@ main { padding: 24px 20px 64px; max-width: 1440px; margin: 0 auto; }
   border: 1px solid var(--border);
   flex-shrink: 0;
 }
+/* The same box as an <img>: keep the art whole and let it sit like the div did. */
+img.item-card-icon, img.item-detail-icon { display: block; object-fit: contain; }
 /* Sits above the description, so the row lands at the same height on every
    card no matter how long the text below it runs. */
 .card-tags-row { display: flex; flex-wrap: wrap; gap: 4px; }
