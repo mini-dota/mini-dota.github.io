@@ -1201,7 +1201,7 @@
           "type": "passive",
           "description": "Gives a chance to stun and deal bonus magic damage on attack.",
           "stun_heroes": 1,
-          "stun_units": 2,
+          "stun_units": 1,
           "levels": [
             {
               "rank": 1,
@@ -6803,14 +6803,14 @@
             {
               "rank": 5,
               "mana": 30,
-              "distance": 1060,
+              "distance": 1055,
               "cooldown": 0.75
             },
             {
               "rank": 6,
               "mana": 25,
-              "distance": 1115,
-              "cooldown": 0.4
+              "distance": 1110,
+              "cooldown": 0.45
             }
           ],
           "icon": "icons/spell-blink.png"
@@ -7240,7 +7240,7 @@
             },
             {
               "rank": 3,
-              "bonus_dmg": 28,
+              "bonus_dmg": 32,
               "slow_pct": 42,
               "duration_heroes": 2,
               "duration_units": 5,
@@ -7248,7 +7248,7 @@
             },
             {
               "rank": 4,
-              "bonus_dmg": 40,
+              "bonus_dmg": 48,
               "slow_pct": 48,
               "duration_heroes": 2.25,
               "duration_units": 5,
@@ -7256,7 +7256,7 @@
             },
             {
               "rank": 5,
-              "bonus_dmg": 52,
+              "bonus_dmg": 64,
               "slow_pct": 54,
               "duration_heroes": 2.5,
               "duration_units": 5,
@@ -7264,7 +7264,7 @@
             },
             {
               "rank": 6,
-              "bonus_dmg": 64,
+              "bonus_dmg": 80,
               "slow_pct": 60,
               "duration_heroes": 2.75,
               "duration_units": 5,
@@ -8223,37 +8223,37 @@
             {
               "rank": 1,
               "evasion_pct": 7,
-              "crit_chance_pct": 10,
+              "crit_chance_pct": 15,
               "crit_dmg_pct": 200
             },
             {
               "rank": 2,
               "evasion_pct": 14,
-              "crit_chance_pct": 10,
+              "crit_chance_pct": 15,
               "crit_dmg_pct": 300
             },
             {
               "rank": 3,
               "evasion_pct": 21,
-              "crit_chance_pct": 10,
+              "crit_chance_pct": 15,
               "crit_dmg_pct": 400
             },
             {
               "rank": 4,
               "evasion_pct": 28,
-              "crit_chance_pct": 10,
+              "crit_chance_pct": 15,
               "crit_dmg_pct": 500
             },
             {
               "rank": 5,
               "evasion_pct": 35,
-              "crit_chance_pct": 10,
+              "crit_chance_pct": 15,
               "crit_dmg_pct": 600
             },
             {
               "rank": 6,
               "evasion_pct": 42,
-              "crit_chance_pct": 10,
+              "crit_chance_pct": 15,
               "crit_dmg_pct": 700
             }
           ],
@@ -8767,14 +8767,14 @@
           "levels": [
             {
               "rank": 1,
-              "dmg_units": 150,
-              "dmg_buildings": 250,
+              "dmg_units": 170,
+              "dmg_buildings": 275,
               "cooldown": 180
             },
             {
               "rank": 2,
-              "dmg_units": 200,
-              "dmg_buildings": 375,
+              "dmg_units": 220,
+              "dmg_buildings": 400,
               "cooldown": 150
             }
           ],
@@ -9691,8 +9691,8 @@
               "rank": 1,
               "hp": 300,
               "hp_regen": 0.5,
-              "dmg_min": 0,
-              "dmg_max": 0,
+              "dmg_min": 11,
+              "dmg_max": 15,
               "armor": 0,
               "cooldown": 30,
               "bounty": 10,
@@ -10275,15 +10275,39 @@
             "caption": "Armor & Strength Scaling",
             "title": "Armor & Strength Bonus",
             "step_label": "Upgrade",
-            "steps": [0, 1, 2, 3, 4, 5, 6],
+            "steps": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
             "rows": [
               {
                 "rank": 1,
-                "values": [1, 2, 3, 4, 5, 6, 7]
+                "values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ]
               },
               {
                 "rank": 2,
-                "values": [2, 4, 6, 8, 10, 12, 14]
+                "values": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14
+                ]
               }
             ]
           },
@@ -10549,42 +10573,42 @@
             {
               "rank": 1,
               "waves": 4,
-              "heal_per_wave": 60,
+              "heal_per_wave": 50,
               "mana": 75,
               "area": 250
             },
             {
               "rank": 2,
               "waves": 4,
-              "heal_per_wave": 90,
+              "heal_per_wave": 80,
               "mana": 80,
               "area": 260
             },
             {
               "rank": 3,
               "waves": 4,
-              "heal_per_wave": 120,
+              "heal_per_wave": 110,
               "mana": 85,
               "area": 270
             },
             {
               "rank": 4,
               "waves": 5,
-              "heal_per_wave": 150,
+              "heal_per_wave": 140,
               "mana": 90,
               "area": 280
             },
             {
               "rank": 5,
               "waves": 5,
-              "heal_per_wave": 180,
+              "heal_per_wave": 170,
               "mana": 95,
               "area": 290
             },
             {
               "rank": 6,
               "waves": 5,
-              "heal_per_wave": 210,
+              "heal_per_wave": 200,
               "mana": 100,
               "area": 300
             }
@@ -10743,8 +10767,8 @@
       "race": null,
       "primary_stat": "STR",
       "roles": ["Support", "Mage"],
-      "difficulty": 5,
-      "difficulty_max": 5,
+      "difficulty": 3,
+      "difficulty_max": 4,
       "str_base": 22,
       "str_growth": 2.7,
       "agi_base": 13,
@@ -10987,51 +11011,56 @@
           "description": "Dashes towards a target point, dealing magic damage to enemy land units passed through and slowing their movement speed and attack speed.",
           "duration_heroes": 3,
           "duration_units": 5,
-          "range": 725,
           "area": 100,
-          "mana": 100,
+          "mana": 90,
           "levels": [
             {
               "rank": 1,
               "damage": 100,
               "move_slow_pct": 25,
               "attack_slow_pct": 25,
-              "cooldown": 10
+              "cooldown": 10,
+              "range": 725
             },
             {
               "rank": 2,
-              "damage": 155,
+              "damage": 160,
               "move_slow_pct": 30,
               "attack_slow_pct": 30,
-              "cooldown": 9.5
+              "cooldown": 9.5,
+              "range": 745
             },
             {
               "rank": 3,
-              "damage": 210,
+              "damage": 220,
               "move_slow_pct": 35,
               "attack_slow_pct": 35,
-              "cooldown": 9
+              "cooldown": 9,
+              "range": 765
             },
             {
               "rank": 4,
-              "damage": 265,
+              "damage": 280,
               "move_slow_pct": 40,
               "attack_slow_pct": 40,
-              "cooldown": 8.5
+              "cooldown": 8.5,
+              "range": 785
             },
             {
               "rank": 5,
-              "damage": 320,
+              "damage": 340,
               "move_slow_pct": 45,
               "attack_slow_pct": 45,
-              "cooldown": 8
+              "cooldown": 8,
+              "range": 805
             },
             {
               "rank": 6,
-              "damage": 375,
+              "damage": 400,
               "move_slow_pct": 50,
               "attack_slow_pct": 50,
-              "cooldown": 7.5
+              "cooldown": 7.5,
+              "range": 825
             }
           ],
           "icon": "icons/spell-righteousfury.png"
@@ -11039,47 +11068,57 @@
         {
           "name": "Consecration",
           "type": "active",
-          "description": "Blesses the ground, healing living allies and dealing magic damage to undead every second while reducing the healing they receive.",
+          "description": "Blesses the ground, healing living allies and dealing magic damage to undead every second while reducing the healing they receive. Does not affect air or mechanical units.",
           "duration": 5,
-          "cooldown": 8,
           "mana": 100,
-          "area": 300,
           "levels": [
             {
               "rank": 1,
-              "heal_per_sec": 25,
-              "dps": 25,
-              "heal_reduction_pct": 25
+              "heal_per_sec": 30,
+              "dps": 30,
+              "heal_reduction_pct": 25,
+              "cooldown": 8,
+              "area": 300
             },
             {
               "rank": 2,
-              "heal_per_sec": 35,
-              "dps": 35,
-              "heal_reduction_pct": 30
+              "heal_per_sec": 45,
+              "dps": 45,
+              "heal_reduction_pct": 30,
+              "cooldown": 7.5,
+              "area": 310
             },
             {
               "rank": 3,
-              "heal_per_sec": 50,
-              "dps": 50,
-              "heal_reduction_pct": 35
+              "heal_per_sec": 60,
+              "dps": 60,
+              "heal_reduction_pct": 35,
+              "cooldown": 7,
+              "area": 320
             },
             {
               "rank": 4,
-              "heal_per_sec": 70,
-              "dps": 70,
-              "heal_reduction_pct": 40
+              "heal_per_sec": 75,
+              "dps": 75,
+              "heal_reduction_pct": 40,
+              "cooldown": 6.5,
+              "area": 330
             },
             {
               "rank": 5,
-              "heal_per_sec": 95,
-              "dps": 95,
-              "heal_reduction_pct": 45
+              "heal_per_sec": 90,
+              "dps": 90,
+              "heal_reduction_pct": 45,
+              "cooldown": 6,
+              "area": 340
             },
             {
               "rank": 6,
-              "heal_per_sec": 125,
-              "dps": 125,
-              "heal_reduction_pct": 50
+              "heal_per_sec": 105,
+              "dps": 105,
+              "heal_reduction_pct": 50,
+              "cooldown": 5.5,
+              "area": 350
             }
           ],
           "icon": "icons/spell-consecration.png"
@@ -11092,33 +11131,33 @@
           "levels": [
             {
               "rank": 1,
+              "magic_resistance_pct": 5,
+              "healing_received_pct": 5
+            },
+            {
+              "rank": 2,
               "magic_resistance_pct": 10,
               "healing_received_pct": 10
             },
             {
-              "rank": 2,
+              "rank": 3,
               "magic_resistance_pct": 15,
               "healing_received_pct": 15
             },
             {
-              "rank": 3,
+              "rank": 4,
               "magic_resistance_pct": 20,
               "healing_received_pct": 20
             },
             {
-              "rank": 4,
+              "rank": 5,
               "magic_resistance_pct": 25,
               "healing_received_pct": 25
             },
             {
-              "rank": 5,
+              "rank": 6,
               "magic_resistance_pct": 30,
               "healing_received_pct": 30
-            },
-            {
-              "rank": 6,
-              "magic_resistance_pct": 35,
-              "healing_received_pct": 35
             }
           ],
           "icon": "icons/spell-sacredaura.png"
@@ -11126,31 +11165,31 @@
         {
           "name": "Cleansing Fire",
           "type": "active",
-          "description": "Calls upon the Light, removing all debuffs from nearby allies and all buffs from nearby enemies. Allies are healed and gain bonus damage, more for each debuff removed. Enemies are stunned.",
-          "cooldown": 150,
+          "description": "Calls upon the Light, removing all debuffs from nearby allies and all buffs from nearby enemies. Allies are healed and gain bonus damage, more for each debuff removed. Enemies are stunned. Buffs that cannot normally be dispelled, such as Avatar, Cloak of Flames, Metamorphosis, Chemical Rage, Wind Walk and Doom, are left alone, and the damage bonus stacks with other damage buffs.",
+          "cooldown": 125,
           "mana": 150,
           "levels": [
             {
               "rank": 1,
               "heal": 125,
-              "heal_per_debuff": 50,
+              "heal_per_debuff": 75,
               "bonus_damage_pct": 25,
               "bonus_damage_per_debuff_pct": 15,
               "bonus_duration": 25,
-              "stun_duration": 1.5,
-              "summon_damage": 400,
+              "stun_duration": 2,
+              "summon_damage": 500,
               "area": 500
             },
             {
               "rank": 2,
               "heal": 250,
-              "heal_per_debuff": 100,
+              "heal_per_debuff": 125,
               "bonus_damage_pct": 50,
               "bonus_damage_per_debuff_pct": 30,
               "bonus_duration": 50,
               "stun_duration": 3,
-              "summon_damage": 800,
-              "area": 1000
+              "summon_damage": 1000,
+              "area": 900
             }
           ],
           "icon": "icons/spell-cleansingfire.png"

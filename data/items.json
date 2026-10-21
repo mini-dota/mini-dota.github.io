@@ -836,7 +836,7 @@
       "id": "cloak_of_flames",
       "name": "Cloak of Flames +10",
       "category": "Upgradable 2",
-      "cost": 425,
+      "cost": 430,
       "upgrade_tiers": 4,
       "effect_type": "passive",
       "description": "Permanent Immolation\nDeals 10 damage per second in an area of 260.",
@@ -917,10 +917,10 @@
       "cost": 800,
       "upgrade_tiers": 4,
       "effect_type": "active",
-      "description": "Active Chain Lightning\nCasts a bolt of lightning that deals 100 magic damage.\nJumps up to 5 times, each jump dealing 20% less damage.\nIncreases the mana of the hero by 40 per stack.",
+      "description": "Active Chain Lightning\nCasts a bolt of lightning that deals 100 magic damage.\nJumps up to 3 times, each jump dealing 20% less damage.\nIncreases the mana of the hero by 40 per stack.",
       "stats": {
         "active_dmg": 100,
-        "active_jumps": 5,
+        "active_jumps": 3,
         "active_jump_reduction_pct": 20,
         "active_cooldown": 19,
         "active_range": 700,
@@ -937,10 +937,10 @@
       ],
       "stack_values": {
         "active_jumps": [
+          3,
+          4,
           5,
-          5,
-          5,
-          5
+          6
         ],
         "active_jump_reduction_pct": [
           20,

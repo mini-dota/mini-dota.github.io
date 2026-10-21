@@ -14,11 +14,13 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # <AbilCode,Field[level][,format]> -- the game substitutes these at runtime.
-# Field is DataA..DataF or one of the generic ones below; format is % (scale a
+# Field is DataA..DataT or one of the generic ones below; format is % (scale a
 # fraction to a percentage) or . (keep decimals).
 PLACEHOLDER = re.compile(r'<([A-Za-z0-9]{4}),([A-Za-z]+)(\d+)?(?:,([%.!]))?>')
 COLOR = re.compile(r'\|c[0-9a-fA-F]{8}|\|r')
-DATA_SLOT = 'ABCDEF'
+# Reforged abilities carry twenty data slots, not six. The Forsaken Paladin is
+# the first hero here to reach past F: Cleansing Fire's summon damage is DataG.
+DATA_SLOT = 'ABCDEFGHIJKLMNOPQRST'
 GENERIC = {'area': 'aare', 'cost': 'amcs', 'cool': 'acdn', 'dur': 'adur',
            'herodur': 'ahdu', 'rng': 'aran', 'range': 'aran'}
 
@@ -49,6 +51,10 @@ ITEM_DATA_FIELDS = {
     'A035': ['Idam'],           # Firehand Gauntlets bonus damage
     'A02Z': ['Icfd'],           # Deathguard immolation, damage per second
     'AIm2': ['Impg'],           # Mana Stone, mana restored
+    # Righteous Fury keeps its last two slots under a different mnemonic --
+    # nrf3/nrf4 are slots G and H, so the trailing digit lies about position
+    # and would collide with chr3/chr4. Order is abilitymetadata.slk's.
+    'ANcp': ['chr1', 'chr2', 'chr3', 'chr4', 'chr5', 'chr6', 'nrf3', 'nrf4'],
 }
 
 
@@ -72,7 +78,9 @@ def ability_data(abils, code, field, level):
         return _pick(levels, level) if levels else None
     if not key.startswith('data') or len(field) != 5:
         return None
-    want = DATA_SLOT.index(field[4].upper()) + 1
+    want = DATA_SLOT.find(field[4].upper()) + 1
+    if not want:
+        return None
     slots = ITEM_DATA_FIELDS.get(code)
     if slots:
         if want > len(slots):
