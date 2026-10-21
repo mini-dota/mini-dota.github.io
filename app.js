@@ -1941,6 +1941,10 @@ const STAT_LABELS = {
   // conditional bonus means nothing without naming the condition.
   damage_falloff_pct: 'Jump Reduction',
   heal_falloff_pct: 'Healing Falloff per Bounce',
+  // Metamorphosis splash is three rings; each column names its share.
+  splash_full_area: 'Splash 100%',
+  splash_half_area: 'Splash 50%',
+  splash_quarter_area: 'Splash 25%',
 };
 
 function statLabel(key) {

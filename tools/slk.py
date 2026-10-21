@@ -14,7 +14,7 @@ import os
 # Rozpakowane pliki gry. Kolejnosc ma znaczenie -- pierwszy istniejacy wygrywa.
 CANDIDATES = [
     os.environ.get('WC3_GAME_DATA', ''),
-    os.path.expanduser('~/OneDrive/Pulpit/v1.3.0.4/GameDataFiles'),
+    os.path.expanduser('~/OneDrive/Dokumenty/Warcraft III/Tools/WC3MapDeprotector/v1.3.0.4/GameDataFiles'),
     os.path.expanduser('~/Pulpit/v1.3.0.4/GameDataFiles'),
     os.path.expanduser('~/Desktop/v1.3.0.4/GameDataFiles'),
 ]

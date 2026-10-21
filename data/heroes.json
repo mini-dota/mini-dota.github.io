@@ -6450,14 +6450,22 @@
               "bonus_hp": 300,
               "cooldown": 180,
               "duration": 45,
-              "mana": 150
+              "mana": 150,
+              "attack_range": 600,
+              "splash_full_area": 50,
+              "splash_half_area": 150,
+              "splash_quarter_area": 250
             },
             {
               "rank": 2,
               "bonus_hp": 600,
               "cooldown": 180,
               "duration": 45,
-              "mana": 150
+              "mana": 150,
+              "attack_range": 600,
+              "splash_full_area": 50,
+              "splash_half_area": 150,
+              "splash_quarter_area": 250
             }
           ],
           "icon": "icons/spell-metamorphosis.png"
