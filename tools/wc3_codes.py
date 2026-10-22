@@ -143,6 +143,7 @@ UNIT_FIELDS = {
     'ulum': 'cost_lumber',
     'ua1c': 'attack_speed',
     'ubba': 'bounty',
+    'ulba': 'bounty_lumber',
 }
 
 ITEM_FIELDS = {

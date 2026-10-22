@@ -1242,7 +1242,7 @@ function showMercDetail(id, el) {
     ${merc.bounty != null ? `
       <div style="margin-bottom:16px;">
         <div style="color:var(--gold); font-size:12px; font-weight:600; margin-bottom:8px;">BOUNTY</div>
-        <span class="build-item-pill">🪙 ${merc.bounty}</span>
+        <span class="build-item-pill">🪙 ${merc.bounty}${merc.bounty_lumber ? ` 🪵 ${merc.bounty_lumber}` : ''}</span>
       </div>
     ` : ''}
     <div class="abilities-section">

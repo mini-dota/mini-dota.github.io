@@ -37,7 +37,8 @@
       "raw_code": "uban",
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 0
+      "bounty": 0,
+      "bounty_lumber": 1
     },
     {
       "id": "druid_of_the_claw",
@@ -76,7 +77,8 @@
       "raw_code": "edoc",
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 0
+      "bounty": 0,
+      "bounty_lumber": 1
     },
     {
       "id": "dryad",
@@ -114,7 +116,8 @@
       "raw_code": "edry",
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 75
+      "bounty": 75,
+      "bounty_lumber": 0
     },
     {
       "id": "mud_golem",
@@ -148,7 +151,8 @@
       "raw_code": "ngrk",
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 25
+      "bounty": 25,
+      "bounty_lumber": 0
     },
     {
       "id": "necromancer",
@@ -187,7 +191,8 @@
       "raw_code": "unec",
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 0
+      "bounty": 0,
+      "bounty_lumber": 1
     },
     {
       "id": "priest",
@@ -227,7 +232,8 @@
       "damage_base": 9,
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 0
+      "bounty": 0,
+      "bounty_lumber": 1
     },
     {
       "id": "raider",
@@ -255,7 +261,8 @@
       "raw_code": "orai",
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 50
+      "bounty": 50,
+      "bounty_lumber": 0
     },
     {
       "id": "shaman",
@@ -295,7 +302,8 @@
       "damage_dice": 0,
       "damage_sides": 0,
       "attack_speed": 2,
-      "bounty": 0
+      "bounty": 0,
+      "bounty_lumber": 1
     },
     {
       "id": "sorceress",
@@ -334,7 +342,8 @@
       "raw_code": "hsor",
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 75
+      "bounty": 75,
+      "bounty_lumber": 0
     },
     {
       "id": "spirit_walker",
@@ -373,7 +382,8 @@
       "mana_max": 100,
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 50
+      "bounty": 50,
+      "bounty_lumber": 0
     },
     {
       "id": "witch_doctor",
@@ -413,7 +423,8 @@
       "armor": 1,
       "damage_dice": 0,
       "damage_sides": 0,
-      "bounty": 0
+      "bounty": 0,
+      "bounty_lumber": 1
     },
     {
       "id": "druid_of_the_talon",
@@ -452,7 +463,8 @@
       "cost": 250,
       "cost_lumber": 2,
       "move_speed": 300,
-      "bounty": 100
+      "bounty": 100,
+      "bounty_lumber": 0
     },
     {
       "id": "zeppelin",
@@ -480,7 +492,8 @@
       "move_speed": 315,
       "cost": 250,
       "cost_lumber": 1,
-      "bounty": 100
+      "bounty": 100,
+      "bounty_lumber": 0
     },
     {
       "id": "sapper",
@@ -506,7 +519,8 @@
       "damage_sides": 0,
       "cost": 250,
       "cost_lumber": 0,
-      "bounty": 100
+      "bounty": 100,
+      "bounty_lumber": 0
     },
     {
       "id": "shredder",
@@ -532,7 +546,8 @@
       "cost": 200,
       "cost_lumber": 0,
       "health": 600,
-      "bounty": 15
+      "bounty": 15,
+      "bounty_lumber": 0
     }
   ]
 }
