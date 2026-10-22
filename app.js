@@ -1239,10 +1239,10 @@ function showMercDetail(id, el) {
         ${merc.buffs.map(b => `<span class="build-item-pill">${b}</span>`).join(' ')}
       </div>
     ` : ''}
-    ${merc.bounty != null ? `
+    ${merc.bounty || merc.bounty_lumber ? `
       <div style="margin-bottom:16px;">
         <div style="color:var(--gold); font-size:12px; font-weight:600; margin-bottom:8px;">BOUNTY</div>
-        <span class="build-item-pill">🪙 ${merc.bounty}${merc.bounty_lumber ? ` 🪵 ${merc.bounty_lumber}` : ''}</span>
+        <span class="build-item-pill">${[merc.bounty ? `🪙 ${merc.bounty}` : '', merc.bounty_lumber ? `🪵 ${merc.bounty_lumber}` : ''].filter(Boolean).join(' ')}</span>
       </div>
     ` : ''}
     <div class="abilities-section">
