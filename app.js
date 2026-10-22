@@ -1239,6 +1239,12 @@ function showMercDetail(id, el) {
         ${merc.buffs.map(b => `<span class="build-item-pill">${b}</span>`).join(' ')}
       </div>
     ` : ''}
+    ${merc.bounty != null ? `
+      <div style="margin-bottom:16px;">
+        <div style="color:var(--gold); font-size:12px; font-weight:600; margin-bottom:8px;">BOUNTY</div>
+        <span class="build-item-pill">🪙 ${merc.bounty}</span>
+      </div>
+    ` : ''}
     <div class="abilities-section">
       <h3>Abilities</h3>
       ${abilitiesHtml}
