@@ -19,6 +19,7 @@
       "icon_rows": 3,
       "raw_code": "hslv",
       "stock_max": 1,
+      "stock_replenish_interval": 0,
       "cost_lumber": 0
     },
     {
@@ -40,6 +41,7 @@
       "icon_rows": 3,
       "raw_code": "plcl",
       "stock_max": 1,
+      "stock_replenish_interval": 0,
       "cost_lumber": 0
     },
     {
@@ -60,6 +62,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "shas",
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -80,6 +83,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "dust",
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -101,6 +105,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "hlst",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -122,6 +127,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "mnst",
+      "stock_replenish_interval": 0,
       "cost_lumber": 0
     },
     {
@@ -142,6 +148,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "will",
+      "stock_replenish_interval": 0,
       "cost_lumber": 0
     },
     {
@@ -162,6 +169,7 @@
       "icon_rows": 3,
       "raw_code": "pinv",
       "stock_max": 2,
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -182,6 +190,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "wswd",
+      "stock_replenish_interval": 1,
       "cost_lumber": 0
     },
     {
@@ -202,6 +211,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "I020",
+      "stock_replenish_interval": 90,
       "cost_lumber": 0
     },
     {
@@ -222,6 +232,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "wcyc",
+      "stock_replenish_interval": 90,
       "cost_lumber": 0
     },
     {
@@ -242,6 +253,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "srrc",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -260,6 +272,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "I002",
+      "stock_replenish_interval": 30,
       "tags": [
         "Consumable"
       ],
@@ -283,6 +296,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "I001",
+      "stock_replenish_interval": 60,
       "tags": [
         "Consumable"
       ],
@@ -305,6 +319,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "I000",
+      "stock_replenish_interval": 60,
       "tags": [
         "Consumable"
       ],
@@ -324,6 +339,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "mcri",
+      "stock_replenish_interval": 60,
       "tags": [
         "Consumable"
       ],
@@ -349,6 +365,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "afac",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -371,6 +388,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "war2",
+      "stock_replenish_interval": 120,
       "tags": [
         "Lifesteal"
       ],
@@ -405,6 +423,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "btst",
+      "stock_replenish_interval": 180,
       "uses": 1,
       "tags": [
         "Lifesteal"
@@ -427,6 +446,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "scav",
+      "stock_replenish_interval": 120,
       "tags": [
         "Consumable"
       ],
@@ -451,6 +471,7 @@
       "icon_rows": 3,
       "raw_code": "bspd",
       "stock_max": 1,
+      "stock_replenish_interval": 1,
       "hide_shop_tag": true,
       "tags": [
         "Movement Speed"
@@ -478,6 +499,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "wtlg",
+      "stock_replenish_interval": 1,
       "hide_shop_tag": true,
       "tags": [
         "Movement Speed"
@@ -549,6 +571,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "clsd",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -570,6 +593,7 @@
       "icon_rows": 3,
       "raw_code": "stel",
       "stock_max": 1,
+      "stock_replenish_interval": 1,
       "tags": [
         "Active",
         "Movement Speed"
@@ -596,6 +620,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "ram3",
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -615,6 +640,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "rlif",
+      "stock_replenish_interval": 50,
       "cost_lumber": 0
     },
     {
@@ -634,6 +660,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "rwiz",
+      "stock_replenish_interval": 50,
       "cost_lumber": 0
     },
     {
@@ -653,6 +680,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "gcel",
+      "stock_replenish_interval": 50,
       "cost_lumber": 0
     },
     {
@@ -672,6 +700,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "belv",
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -691,6 +720,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "bgst",
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -710,6 +740,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "ciri",
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -729,6 +760,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "evtl",
+      "stock_replenish_interval": 50,
       "cost_lumber": 0
     },
     {
@@ -749,6 +781,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "mcou",
+      "stock_replenish_interval": 80,
       "cost_lumber": 0
     },
     {
@@ -769,6 +802,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "hcun",
+      "stock_replenish_interval": 80,
       "cost_lumber": 0
     },
     {
@@ -789,6 +823,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "hval",
+      "stock_replenish_interval": 80,
       "cost_lumber": 0
     },
     {
@@ -810,6 +845,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "ckng",
+      "stock_replenish_interval": 90,
       "uses": 1,
       "cost_lumber": 0
     },
@@ -830,6 +866,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "rde4",
+      "stock_replenish_interval": 90,
       "cost_lumber": 0
     },
     {
@@ -850,6 +887,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "clfm",
+      "stock_replenish_interval": 65,
       "cost_lumber": 0
     },
     {
@@ -869,6 +907,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "prvt",
+      "stock_replenish_interval": 90,
       "cost_lumber": 0
     },
     {
@@ -888,6 +927,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "penr",
+      "stock_replenish_interval": 90,
       "cost_lumber": 0
     },
     {
@@ -908,6 +948,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "brac",
+      "stock_replenish_interval": 90,
       "upgrade_tiers": 4
     },
     {
@@ -932,6 +973,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "thdm",
+      "stock_replenish_interval": 90,
       "tags": [
         "Active"
       ],
@@ -974,6 +1016,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "ratf",
+      "stock_replenish_interval": 90,
       "cost_lumber": 0
     },
     {
@@ -996,6 +1039,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "crdt",
+      "stock_replenish_interval": 120,
       "tags": [
         "Active"
       ],
@@ -1019,7 +1063,8 @@
       "icon_index": null,
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "srtl"
+      "raw_code": "srtl",
+      "stock_replenish_interval": 115
     },
     {
       "id": "rusty_mining_pick",
@@ -1049,7 +1094,8 @@
       "icon_index": null,
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "rump"
+      "raw_code": "rump",
+      "stock_replenish_interval": 115
     },
     {
       "id": "sturdy_war_axe",
@@ -1078,7 +1124,8 @@
       "icon_index": null,
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "stwa"
+      "raw_code": "stwa",
+      "stock_replenish_interval": 120
     },
     {
       "id": "cleaving_axe",
@@ -1100,6 +1147,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "I023",
+      "stock_replenish_interval": 120,
       "stack_values": {
         "cleave_aoe": [
           255,
@@ -1127,6 +1175,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "spsh",
+      "stock_replenish_interval": 120,
       "stack_values": {
         "spell_block_cooldown": [
           45,
@@ -1160,6 +1209,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "oslo",
+      "stock_replenish_interval": 25,
       "cost_lumber": 0
     },
     {
@@ -1181,6 +1231,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "odef",
+      "stock_replenish_interval": 25,
       "cost_lumber": 0
     },
     {
@@ -1205,6 +1256,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "ofr2",
+      "stock_replenish_interval": 25,
       "cost_lumber": 0
     },
     {
@@ -1230,6 +1282,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "ocor",
+      "stock_replenish_interval": 25,
       "cost_lumber": 0
     },
     {
@@ -1255,6 +1308,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "oli2",
+      "stock_replenish_interval": 25,
       "cost_lumber": 0
     },
     {
@@ -1277,6 +1331,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "oven",
+      "stock_replenish_interval": 25,
       "cost_lumber": 0
     },
     {
@@ -1300,6 +1355,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "ofro",
+      "stock_replenish_interval": 25,
       "cost_lumber": 0
     },
     {
@@ -1319,6 +1375,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "modt",
+      "stock_replenish_interval": 25,
       "tags": [
         "Lifesteal"
       ],
@@ -1347,7 +1404,8 @@
       "notes": "Orb effects do not stack. Unique - does not stack with other Unique effects.",
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "I01Q"
+      "raw_code": "I01Q",
+      "stock_replenish_interval": 180
     },
     {
       "id": "lightning_claws",
@@ -1373,7 +1431,8 @@
       "notes": "Orb effects do not stack. Unique - does not stack with other Unique effects.",
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "shcw"
+      "raw_code": "shcw",
+      "stock_replenish_interval": 180
     },
     {
       "id": "firebrand_gauntlets",
@@ -1398,7 +1457,8 @@
       "notes": "Orb effects do not stack. Unique - does not stack with other Unique effects. Illusions do not benefit from it.",
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "frhg"
+      "raw_code": "frhg",
+      "stock_replenish_interval": 180
     },
     {
       "id": "corrupted_gauntlets",
@@ -1424,7 +1484,8 @@
       "notes": "Orb effects do not stack. Unique - does not stack with other Unique effects.",
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "rugt"
+      "raw_code": "rugt",
+      "stock_replenish_interval": 180
     },
     {
       "id": "trueshot_shield",
@@ -1445,7 +1506,8 @@
       "notes": "",
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "shen"
+      "raw_code": "shen",
+      "stock_replenish_interval": 180
     },
     {
       "id": "command_shield",
@@ -1466,7 +1528,8 @@
       "notes": "",
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "arsh"
+      "raw_code": "arsh",
+      "stock_replenish_interval": 180
     },
     {
       "id": "unholy_shield",
@@ -1490,7 +1553,8 @@
       "notes": "Active non-stackable with other Unholy Energy",
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "hbth"
+      "raw_code": "hbth",
+      "stock_replenish_interval": 180
     },
     {
       "id": "vampiric_shield",
@@ -1511,6 +1575,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "I01T",
+      "stock_replenish_interval": 180,
       "tags": [
         "Lifesteal"
       ],
@@ -1536,6 +1601,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "shhn",
+      "stock_replenish_interval": 180,
       "tags": [
         "Armor"
       ],
@@ -1561,7 +1627,8 @@
       "notes": "Does not stack with other Immolation effects.",
       "icon_cols": 4,
       "icon_rows": 3,
-      "raw_code": "shdt"
+      "raw_code": "shdt",
+      "stock_replenish_interval": 180
     },
     {
       "id": "voodoo_doll",
@@ -1583,6 +1650,7 @@
       "icon_cols": 4,
       "icon_rows": 3,
       "raw_code": "vddl",
+      "stock_replenish_interval": 180,
       "uses": 1,
       "tags": [
         "Active"
@@ -1606,6 +1674,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "ssil",
+      "stock_replenish_interval": 90,
       "tags": [
         "Active"
       ],
@@ -1630,6 +1699,7 @@
       "icon_cols": 3,
       "icon_rows": 2,
       "raw_code": "klmm",
+      "stock_replenish_interval": 300,
       "tags": [
         "Lifesteal"
       ]
@@ -1655,7 +1725,8 @@
       "icon_index": null,
       "icon_cols": 3,
       "icon_rows": 2,
-      "raw_code": "mlst"
+      "raw_code": "mlst",
+      "stock_replenish_interval": 300
     },
     {
       "id": "poisoned_blade",
@@ -1680,7 +1751,8 @@
       "icon_index": null,
       "icon_cols": 3,
       "icon_rows": 2,
-      "raw_code": "asbl"
+      "raw_code": "asbl",
+      "stock_replenish_interval": 300
     },
     {
       "id": "frostguard",
@@ -1705,7 +1777,8 @@
       "icon_index": null,
       "icon_cols": 3,
       "icon_rows": 2,
-      "raw_code": "frgd"
+      "raw_code": "frgd",
+      "stock_replenish_interval": 300
     },
     {
       "id": "searing_blade",
@@ -1726,7 +1799,8 @@
       "icon_index": null,
       "icon_cols": 3,
       "icon_rows": 2,
-      "raw_code": "srbd"
+      "raw_code": "srbd",
+      "stock_replenish_interval": 300
     },
     {
       "id": "corrupted_blade",
@@ -1752,7 +1826,8 @@
       "icon_index": null,
       "icon_cols": 3,
       "icon_rows": 2,
-      "raw_code": "I01Z"
+      "raw_code": "I01Z",
+      "stock_replenish_interval": 300
     },
     {
       "id": "goblin_land_mines",
@@ -1771,6 +1846,7 @@
       "icon_rows": 2,
       "raw_code": "gobm",
       "stock_max": 1,
+      "stock_replenish_interval": 120,
       "hide_shop_tag": true,
       "tags": [
         "Consumable"
@@ -1814,6 +1890,7 @@
       "icon_rows": 2,
       "raw_code": "sneg",
       "stock_max": 1,
+      "stock_replenish_interval": 120,
       "tags": [
         "Active"
       ]
@@ -1834,6 +1911,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "gemt",
+      "stock_replenish_interval": 300,
       "cost_lumber": 0
     },
     {
@@ -1854,6 +1932,7 @@
       "icon_cols": 1,
       "icon_rows": 1,
       "raw_code": "desc",
+      "stock_replenish_interval": 60,
       "cost_lumber": 2,
       "tags": [
         "Active",
@@ -1879,6 +1958,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "fgbd",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -1899,6 +1979,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "fgrg",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -1922,6 +2003,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "infs",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -1942,6 +2024,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "fgdg",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -1962,6 +2045,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "shar",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -1983,6 +2067,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "axas",
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -2004,6 +2089,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "rnec",
+      "stock_replenish_interval": 60,
       "cost_lumber": 0
     },
     {
@@ -2024,6 +2110,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "fgsk",
+      "stock_replenish_interval": 30,
       "cost_lumber": 0
     },
     {
@@ -2042,6 +2129,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "lmbr",
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -2060,6 +2148,7 @@
       "icon_cols": 4,
       "icon_rows": 2,
       "raw_code": "gold",
+      "stock_replenish_interval": 120,
       "cost": 0
     },
     {
@@ -2079,6 +2168,7 @@
       "icon_rows": 2,
       "raw_code": "texp",
       "stock_max": 5,
+      "stock_replenish_interval": 30,
       "cost_lumber": 0
     },
     {
@@ -2098,6 +2188,7 @@
       "icon_rows": 2,
       "raw_code": "tkno",
       "stock_max": 5,
+      "stock_replenish_interval": 120,
       "cost_lumber": 0
     },
     {
@@ -2117,6 +2208,7 @@
       "icon_rows": 2,
       "raw_code": "tdx2",
       "stock_max": 5,
+      "stock_replenish_interval": 30,
       "cost_lumber": 0
     },
     {
@@ -2136,6 +2228,7 @@
       "icon_rows": 2,
       "raw_code": "tst2",
       "stock_max": 5,
+      "stock_replenish_interval": 30,
       "cost_lumber": 0
     },
     {
@@ -2155,6 +2248,7 @@
       "icon_rows": 2,
       "raw_code": "tin2",
       "stock_max": 5,
+      "stock_replenish_interval": 30,
       "cost_lumber": 0
     },
     {
@@ -2176,6 +2270,7 @@
       "icon_rows": 2,
       "raw_code": "tpow",
       "stock_max": 5,
+      "stock_replenish_interval": 30,
       "cost_lumber": 0
     },
     {
@@ -2193,6 +2288,7 @@
       "icon_rows": 1,
       "raw_code": "tret",
       "stock_max": 1,
+      "stock_replenish_interval": 30,
       "cost_lumber": 0
     }
   ]

@@ -564,6 +564,28 @@ img.item-card-icon, img.item-detail-icon { display: block; object-fit: contain; 
   margin-bottom: 2px;
 }
 
+/* The price stays the gold thing on the line; the restock time is a footnote to
+   it, so it takes the dim text colour and a little air instead of a divider. */
+.card-restock {
+  color: var(--text-dim);
+  font-weight: 500;
+  margin-left: 10px;
+}
+/* The glyph is drawn in hairlines and read thinner than the coin beside it. */
+.card-restock .price-icon { -webkit-text-stroke: 0.3px currentColor; }
+/* Beside the title the price is 19px; the restock stays a step below it. A
+   shared baseline would leave its figures 1.5px under the middle of the price's,
+   so it is lifted onto that axis. The watch's centre already matches the figures
+   at one size, so it drops the lift the coin needs. */
+.detail-price .card-restock {
+  font-size: 15px;
+  margin-left: 14px;
+  text-transform: none;
+  position: relative;
+  top: -1.5px;
+}
+.detail-price .card-restock .price-icon { vertical-align: baseline; }
+
 .card-incomplete { opacity: 0.6; }
 .card-incomplete::after {
   content: 'Incomplete';
@@ -724,6 +746,9 @@ img.item-card-icon, img.item-detail-icon { display: block; object-fit: contain; 
   line-height: 1.5;
   color: var(--gold-light);
 }
+/* "Stock Replenish Interval" wraps in a 120px track, and a stat box has no room
+   for a second line. */
+.stat-box-wide { grid-column: span 2; white-space: nowrap; }
 .stat-label { font-size: 11px; color: var(--text-dim); }
 /* 15px, not the 18px this rule used to claim: the figure was being overridden
    to 14px inline by app.js anyway, so the stylesheet was describing a size the
@@ -1432,6 +1457,9 @@ img.item-card-icon, img.item-detail-icon { display: block; object-fit: contain; 
      widest un-shrinkable thing in the item grid and it was making the page
      scroll sideways, so here the two currencies are allowed to stack. */
   .card-cost { white-space: normal; }
+  /* A phone card has no room for both on one line, and letting them run on
+     broke the line between the lumber icon and its number. */
+  .card-cost .card-restock { display: block; margin-left: 0; }
   .search-bar { flex-wrap: wrap; }
   .search-bar input { max-width: none; flex: 1 1 100%; }
   .search-bar select { flex: 1; }

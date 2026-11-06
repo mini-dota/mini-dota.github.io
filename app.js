@@ -629,7 +629,7 @@ function renderItems(filter = '', catFilter = '') {
       <div class="card-top-row">
         ${itemIconHtml(it, 'item-card-icon', 56)}
         <div class="card-top-text">
-          ${priceHtml(it) ? `<div class="card-cost">${priceHtml(it)}</div>` : ''}
+          ${priceHtml(it) ? `<div class="card-cost">${priceHtml(it)}${restockHtml(it)}</div>` : ''}
           <div class="card-name">${it.name}</div>
         </div>
       </div>
@@ -817,7 +817,7 @@ function showItemTooltip(id, el) {
       <div style="flex:1;">
         <div class="detail-title">
           ${item.name}
-          ${priceHtml(item) ? `<span class="detail-price">${priceHtml(item, '&nbsp; ')}</span>` : ''}
+          ${priceHtml(item) ? `<span class="detail-price">${priceHtml(item, '&nbsp; ')}${restockHtml(item)}</span>` : ''}
         </div>
         <div class="detail-subtitle card-tags-row" style="margin-top:6px;">
           ${shopTag(item)}
@@ -832,6 +832,15 @@ function showItemTooltip(id, el) {
     ${item.description ? `<p style="color:var(--text); line-height:1.6; margin-bottom:16px; white-space:pre-line;">${item.description}</p>` : ''}
     ${statsHtml}
     ${stackHtml}
+    ${item.stock_replenish_interval != null ? `<div style="margin-bottom:16px;">
+        <div style="color:var(--gold); font-size:12px; font-weight:600; margin-bottom:8px;">SHOP</div>
+        <div class="stats-grid" style="margin-bottom:0;">
+          <div class="stat-box stat-box-wide">
+            <div class="stat-label">${statLabel('stock_replenish_interval')}</div>
+            <div class="stat-value">${item.stock_replenish_interval}s</div>
+          </div>
+        </div>
+      </div>` : ''}
     ${item.notes ? `<div>
         <div style="color:var(--gold); font-size:12px; font-weight:600; margin-bottom:2px;">NOTES</div>
         <div style="color:var(--text-dim); font-size:13px; line-height:1.5;">${item.notes}</div>
@@ -1975,6 +1984,15 @@ function priceHtml(it, sep = ' ') {
   if (it.cost) parts.push(`<span class="price-icon">🪙</span> ${it.cost}`);
   if (it.cost_lumber) parts.push(`<span class="price-icon">🪵</span> ${it.cost_lumber}`);
   return parts.join(sep);
+}
+
+// How long the shop takes to restock the item, beside the price because both
+// answer "can I buy it now". An item no shop sells has no interval and no chip;
+// 0 is a real value, an instant restock, so the test is for absence.
+function restockHtml(it) {
+  const s = it.stock_replenish_interval;
+  if (s == null) return '';
+  return `<span class="card-restock" title="Stock Replenish Interval: ${s} seconds"><span class="price-icon">⏱</span> ${s}s</span>`;
 }
 
 // The shop tag, unless the item says its own tags describe it better -- the

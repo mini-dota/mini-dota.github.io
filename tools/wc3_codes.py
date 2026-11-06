@@ -152,4 +152,5 @@ ITEM_FIELDS = {
     'ilev': 'level',
     'iusa': 'uses',
     'isto': 'stock_max',
+    'istr': 'stock_replenish_interval',
 }

@@ -647,6 +647,12 @@ def update_items(m, rep):
             rep.note('items / %s: heurystyka daje %s - rozstrzygnij recznie'
                      % (item['name'], ','.join(hits)))
 
+    # Boots of Intelligence and Agility carry a replenish interval in object data,
+    # but they are forms of the boots and no shop stocks them: the number means
+    # nothing there and must not reach the page.
+    sold = {c for obj in m['units'].values() for fid in ('usei', 'umki')
+            for c in str(one(obj, fid) or '').split(',')}
+
     for item in doc['items']:
         code = item.get('raw_code')
         obj = m['items'].get(code) if code else None
@@ -654,6 +660,8 @@ def update_items(m, rep):
             continue
         where = 'items / ' + item['name']
         for fid, key in ITEM_FIELDS.items():
+            if fid == 'istr' and code not in sold:
+                continue
             val = one(obj, fid)
             # A cost the map never sets is zero, not "leave whatever the site
             # says". Treating absence as no-op let Serathil and the Runed
