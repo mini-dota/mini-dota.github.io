@@ -839,15 +839,6 @@ function showItemTooltip(id, el) {
     ${item.description ? `<p style="color:var(--text); line-height:1.6; margin-bottom:16px; white-space:pre-line;">${item.description}</p>` : ''}
     ${statsHtml}
     ${stackHtml}
-    ${item.stock_replenish_interval != null ? `<div style="margin-bottom:16px;">
-        <div style="color:var(--gold); font-size:12px; font-weight:600; margin-bottom:8px;">SHOP</div>
-        <div class="stats-grid" style="margin-bottom:0;">
-          <div class="stat-box stat-box-wide">
-            <div class="stat-label">${statLabel('stock_replenish_interval')}</div>
-            <div class="stat-value">${item.stock_replenish_interval}s</div>
-          </div>
-        </div>
-      </div>` : ''}
     ${item.notes ? `<div>
         <div style="color:var(--gold); font-size:12px; font-weight:600; margin-bottom:2px;">NOTES</div>
         <div style="color:var(--text-dim); font-size:13px; line-height:1.5;">${item.notes}</div>
