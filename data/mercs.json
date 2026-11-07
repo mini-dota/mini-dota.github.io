@@ -365,7 +365,7 @@
         {
           "name": "Disenchant",
           "type": "Active",
-          "description": "Removes all buffs from units in a target area. Deals 400 damage to summoned units."
+          "description": "Removes all buffs from units in a target area. Deals 375 damage to summoned units."
         },
         {
           "name": "Ethereal Form",
