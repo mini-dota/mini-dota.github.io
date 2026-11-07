@@ -1990,7 +1990,7 @@ function priceHtml(it, sep = ' ') {
 function restockHtml(it) {
   const s = it.stock_replenish_interval;
   if (s == null) return '';
-  return `<span class="card-restock" title="Stock Replenish Interval: ${s} seconds"><span class="price-icon">⏱</span> ${s}s</span>`;
+  return `<span class="card-restock" data-tip="Stock Replenish Interval"><span class="price-icon">⏱</span> ${s}s</span>`;
 }
 
 // The shop tag, unless the item says its own tags describe it better -- the
