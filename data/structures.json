@@ -156,14 +156,9 @@
       "attack_range": 500,
       "abilities": [
         {
-          "name": "Healing Ward (Fountain)",
+          "name": "Rejuvenation Aura",
           "type": "Aura",
-          "description": "Restores 3.5% of maximum hit points per second to friendly units within 500 range."
-        },
-        {
-          "name": "Fountain of Mana",
-          "type": "Aura",
-          "description": "Restores 3.5% of maximum mana per second to friendly units within 500 range."
+          "description": "Restores 3.5% of maximum hit points and 3.5% of maximum mana per second to friendly units within 500 range."
         },
         {
           "name": "Invulnerable",
@@ -336,14 +331,9 @@
       "attack_range": 500,
       "abilities": [
         {
-          "name": "Healing Ward (Fountain)",
+          "name": "Rejuvenation Aura",
           "type": "Aura",
-          "description": "Restores 3.5% of maximum hit points per second to friendly units within 500 range."
-        },
-        {
-          "name": "Fountain of Mana",
-          "type": "Aura",
-          "description": "Restores 3.5% of maximum mana per second to friendly units within 500 range."
+          "description": "Restores 3.5% of maximum hit points and 3.5% of maximum mana per second to friendly units within 500 range."
         },
         {
           "name": "Invulnerable",
