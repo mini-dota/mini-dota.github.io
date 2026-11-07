@@ -95,7 +95,7 @@
         {
           "name": "Abolish Magic",
           "type": "Active",
-          "description": "Dispels positive buffs from enemy units and negative buffs from friendly units. Deals damage to summoned units. Can be auto-cast."
+          "description": "Dispels positive buffs from enemy units and negative buffs from friendly units. Deals 600 damage to summoned units. Can be auto-cast."
         },
         {
           "name": "Slow Poison",
