@@ -910,6 +910,8 @@ img.item-card-icon, img.item-detail-icon { display: block; object-fit: contain; 
 .levels-table td.lv-mana { --bar: var(--mana); }
 .levels-table td.lv-gold { --bar: var(--gold); }
 .levels-table td.lv-magic { --bar: var(--magic); }
+/* The factor explains the figure in front of it, so it reads quieter. */
+.lv-factor { color: var(--text-dim); font-weight: 400; }
 
 .levels-table tr:hover td { background: rgba(255,255,255,0.025); }
 

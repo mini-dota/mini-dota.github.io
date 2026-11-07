@@ -297,7 +297,12 @@ function showHeroDetail(id, el) {
       }
     }
     const paired = new Set(Object.values(rangeMax));
-    const colKeys = keys.filter(k => !paired.has(k));
+    // A building factor is how its column was worked out -- Blizzard's 15
+    // damage to buildings is its 30 times 50% -- so it rides in brackets after
+    // that figure rather than standing as a column of its own.
+    const FACTOR = '_factor_pct';
+    const isFactor = k => k.endsWith(FACTOR) && keys.includes(k.slice(0, -FACTOR.length));
+    const colKeys = keys.filter(k => !paired.has(k) && !isFactor(k));
     // The heading belongs to the stat, not to the field: `dmg_min` is the
     // Damage column, and its `_min` only says which half of the pair it stores.
     const columnLabel = k => statLabel(k in rangeMax ? k.slice(0, -4) : k);
@@ -393,9 +398,11 @@ function showHeroDetail(id, el) {
       // The top of a range is only ever printed beside its bottom, so a rank
       // that has one and not the other falls back to the single figure.
       const hi = k in rangeMax ? cellValue(rangeMax[k], lv) : undefined;
-      const text = v === undefined ? '—'
+      const factor = v === undefined ? undefined : cellValue(k + FACTOR, lv);
+      const text = (v === undefined ? '—'
         : hi === undefined ? statValue(k, v)
-        : `${statValue(k, v)}–${statValue(rangeMax[k], hi)}`;
+        : `${statValue(k, v)}–${statValue(rangeMax[k], hi)}`)
+        + (factor === undefined ? '' : ` <span class="lv-factor">(${factor}%)</span>`);
       if (!(k in bars) || typeof v !== 'number') return `<td>${text}</td>`;
       // A stub floor, so a genuine zero still reads as a filled-in cell rather
       // than as one nobody got to.
@@ -1309,8 +1316,8 @@ function renderStructures(filter = '', team = '') {
       <div class="card-top-row">
         <div class="item-card-icon" ${itemIconStyle(s.icon, null, 1, 1, 56)}></div>
         <div class="card-top-text">
-          <div class="card-cost">${s.tier}${s.count > 1 ? ` · ${s.count} per team` : ''}</div>
           <div class="card-name">${s.name}</div>
+          <div class="card-cost">${s.tier}${s.count > 1 ? ` · ${s.count} per team` : ''}</div>
         </div>
       </div>
       <div style="font-size:12px; color:var(--text-dim); margin-top:6px;">
